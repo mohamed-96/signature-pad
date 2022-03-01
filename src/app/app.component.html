@@ -1,0 +1,6 @@
+<canvas width="600" height="200" #canvas (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
+
+<div class="actions">
+    <button (click)="clearPad()">Clear</button>
+    <button color="secondary" (click)="savePad()">Save</button>
+</div>
