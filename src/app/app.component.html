@@ -1,6 +1,9 @@
-<canvas width="600" height="200" #canvas (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
+<div class="container">
+    <canvas [ngStyle]="{'display':buttonText === 'Show' ? 'none' : '' }" width="600" height="200" #canvas (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
+</div>
 
 <div class="actions">
+    <button (click)="toggleShow()">{{buttonText}}</button>
     <button (click)="clearPad()">Clear</button>
-    <button color="secondary" (click)="savePad()">Save</button>
+    <button (click)="savePad()">Save</button>
 </div>

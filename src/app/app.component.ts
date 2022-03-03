@@ -10,6 +10,7 @@ import SignaturePad from 'signature_pad';
 export class AppComponent {
   title = 'signatureJS';
   signaturePad: SignaturePad;
+  buttonText = 'Hide';
   @ViewChild('canvas') canvasEl: ElementRef;
 
   constructor() { }
@@ -30,6 +31,11 @@ export class AppComponent {
 
   clearPad() {
     this.signaturePad.clear();
+  }
+
+  toggleShow(){
+    this.clearPad()
+    this.buttonText == 'Hide' ? this.buttonText = 'Show' : this.buttonText = 'Hide';
   }
 
   savePad() {
