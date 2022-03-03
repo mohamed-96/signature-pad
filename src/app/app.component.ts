@@ -10,7 +10,7 @@ import SignaturePad from 'signature_pad';
 export class AppComponent {
   title = 'signatureJS';
   signaturePad: SignaturePad;
-  buttonText = 'Hide';
+  buttonText = 'Show';
   @ViewChild('canvas') canvasEl: ElementRef;
 
   constructor() { }
